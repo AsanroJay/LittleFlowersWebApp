@@ -81,16 +81,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             <img src="${imageSrc}" alt="Article Image" class="article-image">
           </div>
           <div class="flex-grow-1 me-md-4">
-            <div class="d-flex align-items-center mb-2">
-              <small class="text-muted">By: ${article.author}</small>
-            </div>
             <a href="/ArticlePage/${article._id}" style="color: black; text-decoration: none;">
               <h5 class="fw-bold">${article.title}</h5>
             </a>
             <p class="text-muted mb-1" style="max-width: 600px;">
               ${preview}...
             </p>
-            <small class="text-muted">Published ${formattedDate}</small>
+            <small class="text-muted">Published ${formattedDate} • By: ${article.author}</small>
           </div>
         </div>
       `;

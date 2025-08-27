@@ -9,7 +9,7 @@ body {
     margin: none;
     width: 99vw;
     height: 99vh;
-    background-image: url("../assets/login.png");
+    /* background-image: url("../assets/login.png"); */
     background-size: cover;
     background-position: center;
 
@@ -29,7 +29,7 @@ body {
 
 
     border-radius: 1em;
-    border: 5px solid #F4D8F5;
+    border: 5px solid #F7C0D8;
 
     display: flex;
     flex-direction: column;

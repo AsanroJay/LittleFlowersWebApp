@@ -114,6 +114,10 @@ app.get("/News", (req, res) => {
   res.render("Main/News");
 });
 
+app.get("/Classes", (req, res) => {
+  res.render("Main/Classes");
+});
+
 
 
 app.listen(PORT, () => {
