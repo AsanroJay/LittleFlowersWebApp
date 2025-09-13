@@ -118,6 +118,19 @@ app.get("/Classes", (req, res) => {
   res.render("Main/Classes");
 });
 
+app.get("/In-Studio", (req, res) => {
+  res.render("Main/In-Studio");
+});
+
+app.get("/Home-Classes", (req, res) => {
+  res.render("Main/Home-Classes");
+});
+
+app.get("/Online", (req, res) => {
+  res.render("Main/Online");
+});
+
+
 
 
 app.listen(PORT, () => {

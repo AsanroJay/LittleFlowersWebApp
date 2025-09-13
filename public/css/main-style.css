@@ -7,6 +7,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    border-top: 76;
+
 }
 
 
@@ -46,14 +48,16 @@ p {
 .margin-top {
     margin-top: 3em;
 }
-    .articleDayImgContainer {
+
+.articleDayImgContainer {
         height: 100%;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .articleDayImgTop {
+}
+
+.articleDayImgTop {
   width: 180px;
   height: 180px;
   aspect-ratio: 1 / 1;         /* Ensures it's square even if width changes */
@@ -371,6 +375,33 @@ a:active {
 
 .program-carousel .carousel-indicators .active {
   background-color: #fff; /* active circle */
+}
+
+.google-maps {
+  position: relative;
+  /* padding-bottom: 56.25%; 16:9 aspect ratio */
+  height: 250px;
+  overflow: hidden;
+  width: 100%;      
+  max-width: 500px; /* optional: limit size */
+  margin: 0 auto;   /* center it inside column */
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+.button_anchor {
+  position: relative;
+  top: -100px;       /* adjust offset for your header height */
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
 }
 
 
