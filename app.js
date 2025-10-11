@@ -131,12 +131,17 @@ app.get("/Online", (req, res) => {
 });
 
 
+app.get("/Musical-Theatre", (req,res) => {
+  res.render("Main/musical-theatre");
+});
 
+app.get("/Dance", (req, res) => {
+  res.render("Main/Dance");
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
 
 
-
-
+  
