@@ -22,8 +22,21 @@ connectDB();
 // Templates and Static Files
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'templates'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static('public/uploads'));  // serve files
+
+// Serve static files with browser caching (7 days)
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '7d',           
+  etag: true,             
+  lastModified: true     
+}));
+
+// Serve uploads with caching too
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads'), {
+  maxAge: '7d',
+  etag: true,
+  lastModified: true
+}));
+
 
 //Middleware
 const session = require('express-session')
