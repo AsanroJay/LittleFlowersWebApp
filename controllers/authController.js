@@ -80,7 +80,7 @@ exports.forgot_password = async (req,res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Your Temporary Password',
-            text: `Here is your temporary password: ${tempPassword}. Please log in and change it immediately.`
+            text: `Here is your temporary password: ${tempPassword} \nPlease log in and change it immediately.`
         }
 
         await transporter.sendMail(mailOptions);
