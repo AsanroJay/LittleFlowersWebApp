@@ -139,6 +139,25 @@ app.get("/Dance", (req, res) => {
   res.render("Main/Dance");
 });
 
+app.get("/Voice", (req, res) => {
+  res.render("Main/voice");
+});
+
+app.get("/Piano", (req, res) => {
+  res.render("Main/piano");
+});
+
+app.get("/Flute", (req, res) => {
+  res.render("Main/flute");
+});
+
+app.get("/Strings", (req, res) => {
+  res.render("Main/strings");
+});
+
+
+
+
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
