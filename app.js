@@ -62,35 +62,35 @@ app.use('/web', webRoutes)
 app.use('/', mainWebRoutes);
 
 app.get("/forgot", (req, res) => {
-    res.render("ADMIN/forgot")
+    res.render("Admin/forgot")
 })
 
 app.get("/drafts",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/drafts")
+    res.render("Admin/drafts")
 })
 
 app.get("/view",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/view")
+    res.render("Admin/view")
 })
 
 app.get("/published",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/published")
+    res.render("Admin/published")
 })
 
 app.get("/users",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/users")
+    res.render("Admin/users")
 })
 
 app.get("/account",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/account")
+    res.render("Admin/account")
 })
 
 app.get("/create",authController.isAuthenticated, (req, res) => {
-    res.render("ADMIN/create")
+    res.render("Admin/create")
 })
 
 app.get("/post",authController.isAuthenticated, (req, res) => {
-  res.render("ADMIN/post");
+  res.render("Admin/post");
 });
 
 //FOR TESTING MAIN WEB PAGES ONLY 
