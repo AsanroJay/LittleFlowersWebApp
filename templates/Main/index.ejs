@@ -460,25 +460,32 @@
       <div class="container fluid my-5" >
         <div class="d-flex justify-content-center">
           <div class="d-flex align-items-center">
-            
             <!-- Image -->
-            <div class="articleDayImgWrapper me-3">
-              <img 
-              src="<%= recentArticles[0]?.blocks.find(b => b.type === 'image')?.data || 'assets/photo_unavailable.jpg' %>" 
-              alt="Article Image"
-              />
-            </div>
-            
+            <div class="row"> 
+              <div class="col-lg-5">
+                <div class="articleDayImgWrapper me-3">
+                  <a href="/ArticlePage/<%= recentArticles[0]?._id %>">
+                    <img 
+                    src="<%= recentArticles[0]?.blocks.find(b => b.type === 'image')?.data || 'assets/photo_unavailable.jpg' %>" 
+                    alt="Article Image"
+                    />
+                  </a>
+                </div>
+              </div>             
+              
             <!-- Text -->
-            <div class="articleDayCard p-3">
-              <h5>Article of the Day</h5>
-              <h2 class="articleDayTitle"><%= recentArticles[0]?.title || 'Untitled' %></h2>
-              <p class="text-muted">
-                <%= recentArticles[0]?.blocks.find(b => b.type === 'text')?.data.substring(0, 150) || '' %>...
-              </p>
-              <a href="/ArticlePage/<%= recentArticles[0]?._id %>" class="btn btn-light">Read More</a>
-            </div>
-            
+              <div class="col-lg-5 my-auto">
+                <div class="articleDayCard p-3 mt-2">
+                  <h5>Article of the Day</h5>
+                  <a href="/ArticlePage/<%= recentArticles[0]?._id %>">
+                    <h2 class="articleDayTitle"><%= recentArticles[0]?.title || 'Untitled' %></h2>
+                  </a>
+                  <p class="text-muted">
+                    <%= recentArticles[0]?.blocks.find(b => b.type === 'text')?.data.substring(0, 150) || '' %>...
+                  </p>
+                </div>
+              </div>
+          </div>
           </div>
         </div>
       </div>
