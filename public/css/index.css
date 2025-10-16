@@ -62,3 +62,11 @@
     font-size: 0.85rem !important;
   }
 }
+
+@media (max-width: 768px) {
+  #carouselExampleSlidesOnly .carousel-inner img {
+    object-fit: cover;
+    height: 80vh; /* adjust height dominance here (e.g. 90vh for taller) */
+  }
+}
+
