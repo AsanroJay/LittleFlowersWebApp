@@ -1,9 +1,9 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow" style="background-color: rgb(207, 92, 128);" >
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow" style="background-color: rgb(207, 92, 128);">
   <div class="container-fluid d-flex justify-content-between align-items-center w-auto">
     
     <!-- Logo -->
     <a class="navbar-brand" href="/">
-      <img src="/assets/LOGO-Nameplate.png" alt="Logo" height="50" style="padding-right: 100px;"/>
+      <img src="/assets/LOGO-Nameplate.png" alt="Logo" height="50" style="padding-right: 100px;" />
     </a>
 
     <!-- Toggler -->
@@ -22,56 +22,59 @@
     <!-- Collapsible Nav -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav d-flex flex-wrap flex-lg-row justify-content-center gap-3 text-center w-100">
+        
         <li class="nav-item">
-          <a class="nav-link " href="/">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
-        <!-- NEW Dropdown for Classes -->
+
+        <!-- Dropdown for Classes -->
         <li class="nav-item dropdown">
-          <div class="btn-group">
-            <!-- Main button (links to Classes page) -->
-           
-
-            <!-- Split dropdown toggle -->
-            <button type="button" class="btn nav-link dropdown-toggle dropdown-toggle-split"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Classes
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-
-            <!-- Dropdown menu -->
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/Musical-Theatre">Musical Theatre</a></li>
-              <li><a class="dropdown-item" href="/Dance">Dance</a></li>
-              <li><a class="dropdown-item" href="/Voice">Voice</a></li>
-              <li><a class="dropdown-item" href="/Piano">Piano</a></li>
-              <li><a class="dropdown-item" href="/Flute">Flute</a></li>
-              <li><a class="dropdown-item" href="/Strings">Strings</a></li>
-              <li><a class="dropdown-item" href="/Online">Online Classes</a></li>
-            </ul>
-          </div>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Classes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/Musical-Theatre">Musical Theatre</a></li>
+            <li><a class="dropdown-item" href="/Dance">Dance</a></li>
+            <li><a class="dropdown-item" href="/Voice">Voice</a></li>
+            <li><a class="dropdown-item" href="/Piano">Piano</a></li>
+            <li><a class="dropdown-item" href="/Flute">Flute</a></li>
+            <li><a class="dropdown-item" href="/Strings">Strings</a></li>
+            <li><a class="dropdown-item" href="/Online">Online Classes</a></li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/Faculty">Faculty</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/News">News</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/AboutUs">About LFPAA</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#footer">Contact Us</a>
         </li>
       </ul>
     </div>
-    
   </div>
 </nav>
+
+<!-- JS to highlight active page -->
 <script>
   const currentPath = window.location.pathname;
 
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
@@ -85,7 +88,8 @@
   dropdownItems.forEach(item => {
     if (item.getAttribute('href') === currentPath) {
       item.classList.add('active');
-      item.closest('.btn-group').querySelector('.dropdown-toggle').classList.add('active');
+      const dropdownToggle = item.closest('.dropdown').querySelector('.dropdown-toggle');
+      dropdownToggle.classList.add('active');
     }
   });
 </script>
