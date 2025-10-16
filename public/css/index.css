@@ -1,0 +1,16 @@
+.articleDayTitle {
+  color: #333; 
+  transition: color 0.3s ease;
+}
+
+.articleDayTitle:hover {
+  color: #c76b8a; 
+}
+
+.articleDayImgWrapper img {
+  transition: opacity 0.3s ease;
+}
+
+.articleDayImgWrapper img:hover {
+  opacity: 0.80; 
+}
