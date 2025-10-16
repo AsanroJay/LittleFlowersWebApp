@@ -1,31 +1,31 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow" style="background-color: rgb(207, 92, 128);">
-  <div class="container-fluid d-flex justify-content-between align-items-center w-auto">
-    
-    <!-- Logo -->
-    <a class="navbar-brand" href="/">
-      <img src="/assets/LOGO-Nameplate.png" alt="Logo" height="50" style="padding-right: 100px;" />
-    </a>
+  <div class="container-fluid d-flex justify-content-between align-items-center">
 
-    <!-- Toggler -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Logo + Toggler Row -->
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/">
+        <img src="/assets/LOGO-Nameplate.png" class="lf-logo" alt="Logo" height="50" />
+      </a>
+
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
     <!-- Collapsible Nav -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse position-absolute top-100 start-0 w-100 " id="navbarSupportedContent" style="background-color: rgb(207, 92, 128);">
       <ul class="navbar-nav d-flex flex-wrap flex-lg-row justify-content-center gap-3 text-center w-100">
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
         <!-- Dropdown for Classes -->
         <li class="nav-item dropdown">
@@ -50,23 +50,13 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/Faculty">Faculty</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/News">News</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/AboutUs">About LFPAA</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#footer">Contact Us</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="/Faculty">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link" href="/News">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="/AboutUs">About LFPAA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
 
