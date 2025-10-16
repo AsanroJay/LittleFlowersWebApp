@@ -409,3 +409,36 @@ a:active {
   }
 }
 
+/* MOBILE CAROUSEL STYLES */
+#carouselMobile {
+  height: 80vh; 
+  overflow: hidden;
+}
+
+#carouselMobile .carousel-inner,
+#carouselMobile .carousel-item {
+  height: 100%;
+}
+
+#carouselMobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hide the desktop carousel and its height on mobile screens */
+@media (max-width: 767px) {
+  #carouselExampleSlidesOnly {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #carouselMobile {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
