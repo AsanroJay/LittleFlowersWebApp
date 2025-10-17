@@ -449,3 +449,9 @@ a:active {
 .dropdown-item-desktop:hover {
   color: rgb(197, 137, 156);
 }
+
+
+.dropdown-menu.custom-width {
+  min-width: 230px; 
+}
+
