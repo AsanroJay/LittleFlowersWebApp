@@ -442,3 +442,10 @@ a:active {
   }
 }
 
+.dropdown-item-desktop {
+  color: rgb(207, 92, 128);
+}
+
+.dropdown-item-desktop:hover {
+  color: rgb(197, 137, 156);
+}
