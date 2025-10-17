@@ -1,4 +1,67 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow" style="background-color: rgb(207, 92, 128);">
+<!-- DESKTOP NAVBAR (visible on large screens and up) -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow d-none d-lg-flex"
+  style="background-color: rgb(207, 92, 128);">
+  <div class="container-fluid d-flex justify-content-between align-items-center w-auto">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">
+      <img src="/assets/LOGO-Nameplate.png" alt="Logo" height="50" style="padding-right: 100px;" />
+    </a>
+
+    <!-- Centered Nav -->
+    <div class="navbar-collapse justify-content-center">
+      <ul class="navbar-nav d-flex flex-wrap flex-lg-row justify-content-center gap-3 text-center w-100">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+
+        <!-- Dropdown for Classes -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownDesktop"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Classes
+          </a>
+          <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdownDesktop">
+            <li><a class="dropdown-item" href="/Musical-Theatre">Musical Theatre</a></li>
+            <li><a class="dropdown-item" href="/Dance">Dance</a></li>
+            <li><a class="dropdown-item" href="/Voice">Voice</a></li>
+            <li><a class="dropdown-item" href="/Piano">Piano</a></li>
+            <li><a class="dropdown-item" href="/Flute">Flute</a></li>
+            <li><a class="dropdown-item" href="/Strings">Strings</a></li>
+            <li><a class="dropdown-item" href="/Online">Online Classes</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Faculty">Faculty</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/News">News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/AboutUs">About LFPAA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAVBAR (visible below lg breakpoint) -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow d-lg-none"
+  style="background-color: rgb(207, 92, 128);">
   <div class="container-fluid d-flex justify-content-between align-items-center">
 
     <!-- Logo + Toggler Row -->
@@ -13,8 +76,8 @@
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#navbarSupportedContentMobile"
+        aria-controls="navbarSupportedContentMobile"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
@@ -23,30 +86,34 @@
     </div>
 
     <!-- Collapsible Nav -->
-    <div class="collapse navbar-collapse position-absolute top-100 start-0 w-100 " id="navbarSupportedContent" style="background-color: rgb(207, 92, 128);">
-      <ul class="navbar-nav d-flex flex-wrap flex-lg-row justify-content-center gap-3 text-center w-100">
+    <div class="collapse navbar-collapse position-absolute top-100 start-0 w-100"
+      id="navbarSupportedContentMobile"
+      style="background-color: rgb(207, 92, 128);">
+      <ul class="navbar-nav d-flex flex-column justify-content-center align-items-center gap-2 text-center w-100">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
         <!-- Dropdown for Classes -->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown text-center">
           <a
             class="nav-link dropdown-toggle"
             href="#"
-            id="navbarDropdown"
+            id="navbarDropdownMobile"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Classes
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/Musical-Theatre">Musical Theatre</a></li>
-            <li><a class="dropdown-item" href="/Dance">Dance</a></li>
-            <li><a class="dropdown-item" href="/Voice">Voice</a></li>
-            <li><a class="dropdown-item" href="/Piano">Piano</a></li>
-            <li><a class="dropdown-item" href="/Flute">Flute</a></li>
-            <li><a class="dropdown-item" href="/Strings">Strings</a></li>
-            <li><a class="dropdown-item" href="/Online">Online Classes</a></li>
+          <ul class="dropdown-menu border-0 text-center"
+              aria-labelledby="navbarDropdownMobile"
+              style="background-color: rgb(207, 92, 128);">
+            <li><a class="dropdown-item text-white-50" href="/Musical-Theatre">Musical Theatre</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Dance">Dance</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Voice">Voice</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Piano">Piano</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Flute">Flute</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Strings">Strings</a></li>
+            <li><a class="dropdown-item text-white-50" href="/Online">Online Classes</a></li>
           </ul>
         </li>
 
@@ -73,7 +140,6 @@
     }
   });
 
-  // Handle dropdowns specifically
   const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
   dropdownItems.forEach(item => {
     if (item.getAttribute('href') === currentPath) {
@@ -83,3 +149,16 @@
     }
   });
 </script>
+
+<!-- Custom Styling for Dropdowns -->
+<style>
+  /* Ensure dropdown text matches navbar tone */
+  .dropdown-menu .dropdown-item {
+    color: #f5f5f5 !important;
+    text-align: center;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+  }
+</style>
