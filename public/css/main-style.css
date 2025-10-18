@@ -455,3 +455,24 @@ a:active {
   min-width: 230px; 
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.accordion-button {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3); /* soft white flash */
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus,
+.accordion-button:active {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: transparent !important;
+}
+
+
+
+
