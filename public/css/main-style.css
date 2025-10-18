@@ -389,23 +389,21 @@ a:active {
 
   /* muted white text */
   .navbar .dropdown-item {
-    color: rgba(255, 255, 255, 0.85) !important;
-    text-align: center;
+    color: rgba(255, 255, 255, 0.65) !important; /* same tone as navbar non-active links */
     background: none !important;
     border: none;
     transition: color 0.2s ease, background-color 0.2s ease;
   }
 
-
   .navbar .dropdown-item:hover,
   .navbar .dropdown-item:focus {
+    color: #ffffff !important; /* full white on hover */
     background-color: rgba(255, 255, 255, 0.12) !important;
-    color: rgba(255, 255, 255, 1) !important;
   }
 
   .navbar .dropdown-item.active {
+    color: #ffffff !important;
     background-color: rgba(255, 255, 255, 0.22) !important;
-    color: #fff !important;
   }
 }
 
@@ -458,7 +456,6 @@ a:active {
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
 
 .accordion-button {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3); /* soft white flash */
